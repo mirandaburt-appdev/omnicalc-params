@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   
   get("/flexible/payment/:basis_points/:num_of_years/:present_value", { :controller => "calc", :action => "flex_payment" })
   
-  get("/square/results", { :controller => "calc", :action => "square_form_results" })
+  get("/square/results", { :controller => "calc", :action => "square_results" })
   
-  get("/square/new", { :controller => "calc", :action => "blank_square_form"})
+  get("/square/new", { :controller => "calc", :action => "square_form"})
   
   get("/square_root/results", { :controller => "calc", :action => "square_root_results" })
   

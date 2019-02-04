@@ -15,10 +15,14 @@ class CalcController < ApplicationController
         render("calc_templates/flexible_root.html.erb")
     end
     
-    def square_form_results
+    def square_results
         @the_input_number = params.fetch("user_number").to_f
         @the_answer = @the_input_number * @the_input_number
-    render("calc_templates/square_results.html.erb")
+        render("calc_templates/square_results.html.erb")
+    end
+
+def square_form
+    render("calc_templates/square_form.html.erb")
 end
 
 def flex_payment
@@ -40,9 +44,6 @@ def flex_random
     @output = rand(@first...@second)
     
     render("calc_templates/flexible_random.html.erb")
-end
-def blank_square_form
-    render("calc_templates/square_form.html.erb")
 end
 
 def square_root_results

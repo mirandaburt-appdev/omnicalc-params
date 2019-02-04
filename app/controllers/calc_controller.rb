@@ -60,4 +60,14 @@ end
 def payment_new
     render("calc_templates/payment_new.html.erb")
 end
+def random_form
+   
+    render("calc_templates/random_form.html.erb")
+end
+def random_results
+        @minimum = params.fetch("user_min").to_f
+       @maximum = params.fetch("user_max").to_f
+       @result = rand(@minimum..@maximum)
+    render("calc_templates/random_results.html.erb")
+end
 end

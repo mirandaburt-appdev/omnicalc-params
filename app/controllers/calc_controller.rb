@@ -47,11 +47,13 @@ def flex_random
 end
 
 def square_root_results
+    @user_number = params.fetch("user_number").to_f
+    @output = @user_number ** (0.5)
     render("calc_templates/square_root_results.html.erb")
 end
+
 def square_root_form
-    @input_num = params.fetch("input_num").to_f
-    @output = @input_num ** @input_num
+
     render("calc_templates/square_root_form.html.erb")
 end
 def payment_results

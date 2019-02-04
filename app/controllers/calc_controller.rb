@@ -16,8 +16,8 @@ class CalcController < ApplicationController
     end
     
     def square_form_results
-        @the_input_number = params.fetch("the_input_number").to_f
-        @the_answer = @the_input_number ** 2
+        @the_input_number = params.fetch("user_number").to_f
+        @the_answer = @the_input_number * @the_input_number
     render("calc_templates/square_results.html.erb")
 end
 
